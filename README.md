@@ -170,17 +170,16 @@ Le **meilleur score** est conservé localement. Chaque descente possède une **g
 - **Génération :** PRNG déterministe Mulberry32, salles et choix d'améliorations dérivés de la graine.
 - **Audio :** synthèse Web Audio, aucune ressource audio externe.
 - **Sauvegarde :** `localStorage` versionné, validé et tolérant aux erreurs.
-- **Déploiement :** build Vite publié sur GitHub Pages via la branche `gh-pages`.
+- **Déploiement :** GitHub Actions → GitHub Pages.
 
 ## Architecture
 
 ```text
 doomscroll-dungeon/
+├── .github/workflows/deploy.yml
 ├── docs/
 │   ├── banner.svg
 │   └── screenshots/
-├── scripts/
-│   └── deploy-pages.mjs
 ├── public/
 │   └── favicon.svg
 ├── src/
@@ -276,13 +275,14 @@ npm test
 
 ## Déploiement GitHub Pages
 
-Le site est généré par Vite dans `dist/`, puis publié sur la branche **`gh-pages`**. GitHub Pages sert directement cette branche.
+Le déploiement est automatisé par [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). Chaque push sur `main` :
 
-```bash
-npm run deploy:pages
-```
+1. installe les dépendances avec `npm ci` ;
+2. exécute les tests ;
+3. construit le jeu dans `dist/` ;
+4. publie l'artefact sur GitHub Pages via les actions officielles `configure-pages`, `upload-pages-artifact` et `deploy-pages`.
 
-Le script vérifie le build, copie `dist/`, ajoute `.nojekyll` et force la publication sur le remote `origin`. Le build n'a besoin d'aucun serveur de jeu, base de données ou variable d'environnement.
+Le build n'a besoin d'aucun serveur de jeu, base de données ou variable d'environnement.
 
 **Jeu en ligne :** [https://casifox.github.io/doomscroll-dungeon/](https://casifox.github.io/doomscroll-dungeon/)
 

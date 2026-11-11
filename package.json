@@ -27,7 +27,6 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "deploy:pages": "node scripts/deploy-pages.mjs",
     "test": "vitest run",
     "test:watch": "vitest"
   },
