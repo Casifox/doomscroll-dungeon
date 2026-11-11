@@ -4,7 +4,7 @@
  *
  * Utilisation : npm run deploy:pages
  */
-import { execFileSync } from 'node:child_process';
+import { execFileSync, execSync } from 'node:child_process';
 import { cpSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
@@ -12,7 +12,6 @@ import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const npm = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 
 function fail(message) {
   console.error(`\nErreur de déploiement : ${message}\n`);
@@ -21,8 +20,18 @@ function fail(message) {
 
 console.log('Construction du jeu…');
 try {
-  execFileSync(npm, ['run', 'build'], { cwd: root, stdio: 'inherit' });
-} catch {
+  // Lorsqu'il est lancé par npm, npm_execpath permet d'éviter les problèmes
+  // d'exécution des scripts .cmd sur Windows.
+  if (process.env.npm_execpath) {
+    execFileSync(process.execPath, [process.env.npm_execpath, 'run', 'build'], {
+      cwd: root,
+      stdio: 'inherit',
+    });
+  } else {
+    execSync('npm run build', { cwd: root, stdio: 'inherit' });
+  }
+} catch (error) {
+  console.error(error instanceof Error ? error.message : error);
   fail('le build a échoué.');
 }
 
