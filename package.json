@@ -1,0 +1,39 @@
+{
+  "name": "doomscroll-dungeon",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Roguelite d'action satirique : transformez votre fil d'actualité en donjon.",
+  "author": "Casifox",
+  "license": "MIT",
+  "homepage": "https://casifox.github.io/doomscroll-dungeon/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Casifox/doomscroll-dungeon.git"
+  },
+  "keywords": [
+    "jeu",
+    "roguelite",
+    "javascript",
+    "typescript",
+    "html5",
+    "doomscroll",
+    "github-pages"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "deploy:pages": "node scripts/deploy-pages.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7",
+    "vitest": "^2.1.8"
+  }
+}

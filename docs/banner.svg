@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 560" width="1600" height="560" role="img" aria-labelledby="title desc">
+  <title id="title">Doomscroll Dungeon</title>
+  <desc id="desc">Bannière du jeu Doomscroll Dungeon : le réseau social qui vous dévore.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08080f"/>
+      <stop offset="0.55" stop-color="#0b0b14"/>
+      <stop offset="1" stop-color="#050509"/>
+    </linearGradient>
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff3d7f"/>
+      <stop offset="1" stop-color="#ff7aa8"/>
+    </linearGradient>
+    <linearGradient id="lime" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b6ff3c"/>
+      <stop offset="1" stop-color="#ddff8a"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff3d7f" stop-opacity="0"/>
+      <stop offset="0.3" stop-color="#ff3d7f"/>
+      <stop offset="0.7" stop-color="#b6ff3c"/>
+      <stop offset="1" stop-color="#b6ff3c" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M 64 0 L 0 0 0 64" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="blur-pink" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="85"/>
+    </filter>
+    <filter id="blur-lime" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="70"/>
+    </filter>
+    <filter id="glow-pink" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="560" fill="url(#bg)"/>
+  <rect width="1600" height="560" fill="url(#grid)" opacity="0.9"/>
+
+  <ellipse cx="160" cy="300" rx="360" ry="280" fill="#ff3d7f" opacity="0.12" filter="url(#blur-pink)"/>
+  <ellipse cx="1440" cy="80" rx="300" ry="240" fill="#b6ff3c" opacity="0.08" filter="url(#blur-lime)"/>
+  <ellipse cx="1220" cy="560" rx="380" ry="220" fill="#48e5ff" opacity="0.055" filter="url(#blur-lime)"/>
+
+  <rect x="0" y="0" width="1600" height="2" fill="url(#line)" opacity="0.8"/>
+
+  <g font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif">
+    <g transform="translate(92 96)">
+      <rect x="0" y="0" width="196" height="30" rx="15" fill="#ffffff" fill-opacity="0.025" stroke="#ffffff" stroke-opacity="0.13"/>
+      <circle cx="18" cy="15" r="4" fill="#b6ff3c"/>
+      <text x="31" y="19" fill="#a7a4b5" font-size="10" font-weight="700" letter-spacing="2.1">UN ROGUELITE QUI VOUS DÉVORE</text>
+    </g>
+
+    <g transform="translate(82 142)">
+      <text x="0" y="148" fill="#f5f1e8" font-family="Segoe UI Black, Arial Black, sans-serif" font-size="164" font-weight="900" letter-spacing="-10">DOOM</text>
+      <text x="0" y="292" fill="url(#pink)" font-family="Segoe UI Black, Arial Black, sans-serif" font-size="164" font-weight="900" letter-spacing="-10">SCROLL</text>
+      <g transform="translate(10 322)">
+        <rect x="0" y="0" width="386" height="50" fill="#b6ff3c" fill-opacity="0.04" stroke="#b6ff3c" stroke-opacity="0.6"/>
+        <text x="24" y="32" fill="#b6ff3c" font-size="17" font-weight="900" letter-spacing="7.5">DUNGEON</text>
+      </g>
+    </g>
+
+    <g transform="translate(800 154)">
+      <text x="0" y="0" fill="#ff8ab2" font-size="11" font-weight="800" letter-spacing="3.2">LE RÉSEAU SOCIAL QUI VOUS DÉVORE</text>
+      <text x="0" y="58" fill="#f5f1e8" font-family="Segoe UI Black, Arial Black, sans-serif" font-size="38" font-weight="900" letter-spacing="-1.2">LIKE LES MONSTRES.</text>
+      <text x="0" y="103" fill="#f5f1e8" font-family="Segoe UI Black, Arial Black, sans-serif" font-size="38" font-weight="900" letter-spacing="-1.2">SURVIS AU FIL.</text>
+      <text x="0" y="149" fill="#9390a1" font-size="15">Huit étages générés. Des pubs piégées. Un algorithme</text>
+      <text x="0" y="173" fill="#9390a1" font-size="15">qui vous connaît un peu trop bien.</text>
+
+      <g transform="translate(0 216)">
+        <g>
+          <rect width="144" height="50" rx="8" fill="#b6ff3c" fill-opacity="0.06" stroke="#b6ff3c" stroke-opacity="0.3"/>
+          <text x="16" y="31" fill="#b6ff3c" font-size="12" font-weight="800" letter-spacing="1.4">SPACE · LIKER</text>
+        </g>
+        <g transform="translate(156 0)">
+          <rect width="166" height="50" rx="8" fill="#48e5ff" fill-opacity="0.05" stroke="#48e5ff" stroke-opacity="0.25"/>
+          <text x="16" y="31" fill="#85edff" font-size="12" font-weight="800" letter-spacing="1.4">C · BOUCLIER</text>
+        </g>
+        <g transform="translate(334 0)">
+          <rect width="166" height="50" rx="8" fill="#ff3d7f" fill-opacity="0.06" stroke="#ff3d7f" stroke-opacity="0.3"/>
+          <text x="16" y="31" fill="#ff8ab2" font-size="12" font-weight="800" letter-spacing="1.4">SHIFT ↓ · ESQUIVE</text>
+        </g>
+      </g>
+
+      <g transform="translate(0 300)">
+        <text x="0" y="18" fill="#646174" font-size="10" font-weight="700" letter-spacing="2.4">9 ÉTAGES</text>
+        <text x="132" y="18" fill="#646174" font-size="10" font-weight="700" letter-spacing="2.4">3 ENNEMIS</text>
+        <text x="280" y="18" fill="#646174" font-size="10" font-weight="700" letter-spacing="2.4">10 AMÉLIORATIONS</text>
+        <text x="480" y="18" fill="#ff3d7f" font-size="10" font-weight="700" letter-spacing="2.4">1 BOSS</text>
+      </g>
+    </g>
+
+    <g transform="translate(1290 405)" opacity="0.9">
+      <rect width="220" height="90" rx="12" fill="#0f0f18" fill-opacity="0.92" stroke="#ff3d7f" stroke-opacity="0.28"/>
+      <text x="18" y="24" fill="#ff8ab2" font-size="9" font-weight="800" letter-spacing="1.7">BOSS FINAL</text>
+      <text x="18" y="48" fill="#f5f1e8" font-family="Segoe UI Black, Arial Black, sans-serif" font-size="16" font-weight="900" letter-spacing="0.5">L’ALGORITHME</text>
+      <rect x="18" y="63" width="184" height="6" rx="3" fill="#ffffff" fill-opacity="0.08"/>
+      <rect x="18" y="63" width="132" height="6" rx="3" fill="#ff3d7f" opacity="0.8"/>
+    </g>
+
+    <g transform="translate(84 490)">
+      <text x="0" y="0" fill="#5f5c6e" font-size="9" font-weight="700" letter-spacing="2.6">CHRONOFIL™ · PLATEFORME DE FICTION · AUCUNE DONNÉE PERSONNELLE COLLECTÉE</text>
+    </g>
+    <g transform="translate(1508 490)">
+      <text x="0" y="0" text-anchor="end" fill="#5f5c6e" font-size="9" font-weight="700" letter-spacing="2.4">v1.0</text>
+    </g>
+  </g>
+
+  <g fill="none" stroke="#ff3d7f" stroke-opacity="0.22">
+    <circle cx="1360" cy="275" r="140"/>
+    <circle cx="1360" cy="275" r="180" stroke-opacity="0.1"/>
+  </g>
+  <g fill="#ff3d7f">
+    <path d="M1360 255c-7-12-23-8-23 5 0 12 15 20 23 26 8-6 23-14 23-26 0-13-16-17-23-5Z" opacity="0.55"/>
+  </g>
+  <g fill="#b6ff3c" opacity="0.28">
+    <circle cx="1507" cy="340" r="3"/>
+    <circle cx="158" cy="72" r="2"/>
+    <circle cx="703" cy="464" r="2.5"/>
+  </g>
+</svg>
