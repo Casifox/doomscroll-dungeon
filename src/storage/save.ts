@@ -1,4 +1,5 @@
 import { RUN_CONFIG } from '../core/config';
+import { sanitizeSeed } from '../core/rng';
 import {
   createDefaultProfile,
   createDefaultSettings,
@@ -176,6 +177,8 @@ function validateRun(value: unknown): RunState | null {
   const obj = value as Record<string, unknown>;
   if (obj.version !== RUN_VERSION) return null;
   if (typeof obj.seed !== 'string' || obj.seed.length === 0 || obj.seed.length > 24) return null;
+  const seed = sanitizeSeed(obj.seed);
+  if (!seed) return null;
   const floor = integerOr(obj.floor, 1);
   if (floor < 1 || floor > RUN_CONFIG.totalFloors) return null;
   const maxHp = integerOr(obj.maxHp, 100, 1);
@@ -213,7 +216,7 @@ function validateRun(value: unknown): RunState | null {
   };
   return {
     version: RUN_VERSION,
-    seed: obj.seed,
+    seed,
     floor,
     mode: obj.mode === 'boss' || floor === RUN_CONFIG.bossFloor ? 'boss' : 'combat',
     hp,
