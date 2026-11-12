@@ -83,7 +83,7 @@ export function glitchScreen(root: HTMLElement, duration = 1000, reduced = prefe
 
 export function confetti(root: HTMLElement, reduced = prefersReducedMotion()): void {
   if (reduced) return;
-  const colors = ['#b6ff3c', '#ff3d7f', '#48e5ff', '#ffd166', '#b18cff'];
+  const colors = ['#ff2e63', '#c9f24a', '#12100e', '#f1e8d5'];
   for (let i = 0; i < 36; i++) {
     const piece = document.createElement('span');
     piece.className = 'confetti-piece';

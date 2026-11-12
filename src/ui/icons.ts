@@ -86,15 +86,9 @@ export function icon(name: IconName, className = ''): string {
 }
 
 export const LOGO_MARK = `<svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true">
-  <defs>
-    <linearGradient id="logo-gradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ff3d7f"/>
-      <stop offset="1" stop-color="#b6ff3c"/>
-    </linearGradient>
-  </defs>
-  <rect width="48" height="48" rx="13" fill="#111119"/>
-  <path d="M12 15c0-3.3 2.4-5 6.2-5h9c6 0 9 3 9 9v10c0 5-3 8-9 8H20c-4 0-6.3-1.8-6.3-5V15Z" fill="url(#logo-gradient)"/>
-  <path d="M20 19h7.6c3 0 4.7 1.6 4.7 4.7v4.2c0 3-1.7 4.6-4.7 4.6h-6.1l-5 4V23c0-2.4.9-4 3.5-4Z" fill="#0b0b12"/>
-  <circle cx="17.5" cy="39.5" r="2.6" fill="#ff3d7f"/>
-  <path d="M25 38c-1.5 3-3.8 4.8-6.7 5.8" stroke="#b6ff3c" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+  <rect width="48" height="48" fill="#12100e"/>
+  <path d="M9 12h32v20H25l-9 7v-7H9V12Z" fill="#c9f24a" transform="translate(3 3)"/>
+  <path d="M9 12h32v20H25l-9 7v-7H9V12Z" fill="#ff2e63" stroke="#12100e" stroke-width="2.5" stroke-linejoin="miter"/>
+  <path d="M16 19h17M16 24h11" stroke="#12100e" stroke-width="2.5"/>
+  <circle cx="35.5" cy="24" r="2.2" fill="#12100e"/>
 </svg>`;
